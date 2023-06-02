@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+    <link rel="manifest" href="./site.webmanifest">
+    <title>Accessible Dark Mode Toggle Button</title>
+    <meta name="description" content="An accessible dark mode toggle button using the ARIA-pressed attribute">
+    <link rel="stylesheet" href="./style.css">
+    <script src="./script.js" defer></script>
+</head>
+
+<body>
+    <div class="page-layout">
+        <header class="page-header">
+            <h1>Accessible Dark Mode Toggle Button</h1>
+            <form id="theme-picker" class="theme-picker">
+                <button type="button" id="btn-theme-toggle" class="btn-theme-toggle" aria-pressed>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="icon-moon"
+                        aria-hidden="true">
+                        <path
+                            d="M12 11.807A9.002 9.002 0 0 1 10.049 2a9.942 9.942 0 0 0-5.12 2.735c-3.905 3.905-3.905 10.237 0 14.142 3.906 3.906 10.237 3.905 14.143 0a9.946 9.946 0 0 0 2.735-5.119A9.003 9.003 0 0 1 12 11.807z">
+                        </path>
+                    </svg>
+                    Dark Mode
+                    <span class="btn-theme-state" aria-hidden="true"></span></button>
+            </form>
+        </header>
+        <main class="main">
+            <article class="wrapper">
+                <h2>Description</h2>
+                <p>An accessible dark mode toggle button employing <code>ARIA</code> attributes for screen reader users.
+                </p>
+                <p>Additionally, visual cues (icon, on/off text) are provided for sighted users.</p>
+
+                <h2>Accessibility</h2>
+                <ul>
+                    <li>The <code>ARIA-pressed</code> attribute indicates the button state to screen readers.</li>
+                    <li>The <code>ARIA-hidden</code> attribute hides the SVG icon and CSS content text from
+                        screenreaders.</li>
+                    <li>Keyboard navigation via the <code>Tab</code> key focuses the button.</li>
+                </ul>
+                <h2>CSS</h2>
+                <ul>
+                    <li>CSS variables are used for the dark and light themes.</li>
+                    <li>The <code>content</code> property prints 'on' or 'off' according to the state of the button.
+                    </li>
+                </ul>
+
+                <h2>JavaScript</h2>
+                <ul>
+                    <li>Button state is saved to local storage, so the chosen theme persists.</li>
+                    <li>ES6 (no transpilation to ES5)</li>
+                </ul>
+                <h2>Sources</h2>
+                <ul>
+                    <li><a href="https://boxicons.com/?query=Moon" target="_blank" rel="noopener noreferrer">'Moon'
+                            icon from Free Box Icons (click SVG tab for code))</a></li>
+                    <li><a href="https://inclusive-components.design/toggle-button/" target="_blank"
+                            rel="noopener noreferrer"><code>ARIA-pressed</code> information (and more) from Inclusive
+                            Components/Toggle Buttons</a></li>
+                </ul>
+                <h2>Testing</h2>
+                <p>Tested on Windows 10:</p>
+                <ul>
+                    <li>Chrome</li>
+                    <li>Firefox</li>
+                    <li>Microsoft Edge</li>
+                </ul>
+            </article>
+        </main>
+        <footer class="page-footer">
+            <a href="https://github.com/chrisnajman/accessible-dark-mode-toggle-button" target="_blank"
+                rel="noopener noreferrer">GitHub Repository</a>
+        </footer>
+    </div>
+</body>
+
+</html>

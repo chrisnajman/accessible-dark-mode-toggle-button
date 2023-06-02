@@ -1,0 +1,135 @@
+:root {
+    --horz-center: 0 auto;
+    --font-sans: system-ui, sans-serif;
+    --font-monospace: "Courier New", Courier, monospace;
+    --font-bold: 600;
+    --grid: grid;
+
+    /* Default theme */
+    --clr-body-bg: white;
+    --clr-text: black;
+    --clr-link: blue;
+}
+
+.dark-theme {
+    --clr-body-bg: black;
+    --clr-text: white;
+    --clr-link: skyblue;
+}
+
+*,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    overflow-y: scroll;
+    margin: 0;
+}
+
+body {
+    margin: 0;
+    font-family: var(--font-sans);
+    font-size: 1.25rem;
+    line-height: 1.5;
+    background: var(--clr-body-bg);
+    color: var(--clr-text);
+}
+
+a {
+    color: var(--clr-link);
+}
+
+h1 {
+    text-align: center;
+}
+h1,
+h2 {
+    line-height: 1.1;
+}
+
+button {
+    all: unset;
+    cursor: pointer;
+}
+
+button:focus-visible {
+    outline: 2px solid currentColor;
+}
+
+.page-layout {
+    min-height: 100vh;
+    min-height: 100dvh;
+    display: var(--grid);
+    grid-template-rows: auto 1fr auto;
+}
+
+.page-header,
+.main,
+.page-footer {
+    padding: 2rem 1rem;
+}
+
+.page-header,
+.page-footer {
+    text-align: center;
+}
+
+.page-header {
+    border-bottom: 1px solid currentColor;
+    position: relative;
+}
+
+.page-header h1 {
+    grid-column-start: 2;
+}
+
+.page-footer {
+    border-top: 1px solid currentColor;
+}
+
+.main {
+    margin-top: 1em;
+}
+
+.wrapper {
+    --max-width: 55rem; /* 880px */
+    width: min(100% - 2rem, var(--max-width));
+    margin: var(--horz-center);
+}
+
+code {
+    font-family: var(--font-monospace);
+}
+
+/** Theme picker **/
+.theme-picker {
+    position: absolute;
+    top: 0.25rem;
+    right: 1.25rem;
+    width: fit-content;
+}
+
+.btn-theme-toggle {
+    display: flex;
+    gap: 0.25rem;
+    align-items: center;
+    margin: 0 1rem 0 0.75rem;
+    padding: 0.25rem 0.5rem;
+}
+
+.icon-moon {
+    width: 1.375rem;
+    height: 1.375rem;
+}
+
+[aria-pressed] .icon-moon {
+    fill: currentColor;
+}
+
+[aria-pressed="false"] .btn-theme-state::after {
+    content: ": off";
+}
+[aria-pressed="true"] .btn-theme-state::after {
+    content: ": on";
+}
