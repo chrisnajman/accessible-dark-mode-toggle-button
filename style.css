@@ -4,6 +4,7 @@
     --font-monospace: "Courier New", Courier, monospace;
     --font-bold: 600;
     --grid: grid;
+    --flex: flex;
 
     /* Default theme */
     --clr-body-bg: white;
@@ -86,6 +87,10 @@ button:focus-visible {
 
 .page-footer {
     border-top: 1px solid currentColor;
+    display: var(--flex);
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
 }
 
 .main {
@@ -111,7 +116,7 @@ code {
 }
 
 .btn-theme-toggle {
-    display: flex;
+    display: var(--flex);
     gap: 0.25rem;
     align-items: center;
     margin: 0 1rem 0 0.75rem;

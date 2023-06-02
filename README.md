@@ -1,6 +1,7 @@
 # Accessible Dark Mode Toggle Button
 
 - [Website (Git Pages)](https://chrisnajman.github.io/accessible-dark-mode-toggle-button)
+- [View on Codepen](https://codepen.io/Naj-codepen/pen/JjmgWXM)
 
 ## Description
 
@@ -26,8 +27,8 @@ Additionally, visual cues (icon, on/off text) are provided for sighted users.
 
 ## Sources
 
-- ['Moon' icon from Free Box Icons (click SVG tab for code))](https://boxicons.com/?query=Moon)
 - [`ARIA-pressed` information (and more) from Inclusive Components/Toggle Buttons](https://inclusive-components.design/toggle-button/)
+- ['Moon' icon from Free Box Icons (click SVG tab for code))](https://boxicons.com/?query=Moon)
 
 ## Testing
 
