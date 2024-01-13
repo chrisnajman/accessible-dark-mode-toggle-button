@@ -112,6 +112,7 @@ code {
     position: absolute;
     top: 0.25rem;
     right: 1.25rem;
+    width: -moz-fit-content;
     width: fit-content;
 }
 
